@@ -56,7 +56,11 @@
                 </div>
             </div>
         </div>
-        <p class="text-center text-white-50 small mt-3">&copy; {{ date('Y') }} SISURAT</p>
+        <p class="text-center text-white-50 small mt-3">
+            &copy; {{ date('Y') }} SISURAT
+            &middot;
+            <a href="https://github.com/rio658/sisurat" target="_blank" rel="noopener" class="link-light">github.com/rio658/sisurat</a>
+        </p>
     </div>
 </div>
 <script>

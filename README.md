@@ -1,3 +1,22 @@
+# SISURAT
+
+Sistem Agenda & Disposisi Surat (Laravel + SQLite).
+
+- Situs publik: https://sisurat-production.up.railway.app
+- Repo: https://github.com/rio658/sisurat
+
+## Menjalankan di GitHub Codespaces
+
+1. Di repo GitHub, klik **Code → Codespaces → Create codespace on main**.
+2. Tunggu `postCreateCommand` selesai: `composer install`, `.env` dibuat, migrasi, dan akun seed (`AkunSeeder`).
+3. Jalankan server: `php artisan serve --host=0.0.0.0 --port=8000`.
+4. Buka tab **Ports**, klik kanan port **8000** → **Port Visibility → Public**.
+5. Buka URL `https://<nama-codespace>-8000.app.github.dev`.
+
+Login memakai akun seed: `tu` / `password123` (akun jabatan lain mengikuti `AkunSeeder`).
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
