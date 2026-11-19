@@ -1,14 +1,15 @@
 {
   "name": "SISURAT",
   "image": "mcr.microsoft.com/devcontainers/php:8.4",
-  "forwardPorts": [8000],
+  "forwardPorts": [8080],
   "portsAttributes": {
-    "8000": {
+    "8080": {
       "label": "SISURAT",
       "onAutoForward": "notify"
     }
   },
   "postCreateCommand": "bash -lc '(php -m | grep -qi pdo_sqlite || sudo install-php-extensions pdo_sqlite) && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate && mkdir -p database && touch database/database.sqlite && php artisan migrate --force && php artisan db:seed --class=AkunSeeder --force'",
+  "postStartCommand": "bash -lc 'pgrep -f \"artisan serve\" > /dev/null || nohup php artisan serve --host=0.0.0.0 --port=8080 > /tmp/sisurat-serve.log 2>&1 &'",
   "customizations": {
     "vscode": {
       "extensions": [

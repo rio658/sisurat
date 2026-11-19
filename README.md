@@ -9,9 +9,9 @@ Sistem Agenda & Disposisi Surat (Laravel + SQLite).
 
 1. Di repo GitHub, klik **Code → Codespaces → Create codespace on main**.
 2. Tunggu `postCreateCommand` selesai: `composer install`, `.env` dibuat, migrasi, dan akun seed (`AkunSeeder`).
-3. Jalankan server: `php artisan serve --host=0.0.0.0 --port=8000`.
-4. Buka tab **Ports**, klik kanan port **8000** → **Port Visibility → Public**.
-5. Buka URL `https://<nama-codespace>-8000.app.github.dev`.
+3. Server berjalan otomatis di port **8080** lewat `postStartCommand`. Jika belum jalan, jalankan: `php artisan serve --host=0.0.0.0 --port=8080`.
+4. Buka tab **Ports**, klik kanan port **8080** → **Port Visibility → Private to owner**.
+5. Buka URL `https://<nama-codespace>-8080.app.github.dev`.
 
 Login memakai akun seed: `tu` / `password123` (akun jabatan lain mengikuti `AkunSeeder`).
 
